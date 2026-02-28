@@ -2,7 +2,6 @@
 
 High-performance shared memory IPC for Python — ZMQ-like API without the network overhead.
 
-[![CI](https://github.com/PetarKovacevic/shm-comm/actions/workflows/ci.yml/badge.svg)](https://github.com/PetarKovacevic/shm-comm/actions)
 [![PyPI](https://img.shields.io/pypi/v/shm-comm)](https://pypi.org/project/shm-comm/)
 [![Python](https://img.shields.io/pypi/pyversions/shm-comm)](https://pypi.org/project/shm-comm/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
