@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "shm-comm"
+version = "1.0.0"
+description = "High-performance shared memory IPC for Python — ZMQ-like API without the network overhead"
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "Petar" }]
+keywords = ["shared-memory", "ipc", "robotics", "pubsub", "zmq", "low-latency"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Networking",
+    "Topic :: Scientific/Engineering",
+]
+requires-python = ">=3.8"
+dependencies = ["numpy>=1.21"]
+
+[project.optional-dependencies]
+msgpack = ["msgpack>=1.0.0"]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "msgpack>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/PetarKovacevic/shm-comm"
+Documentation = "https://github.com/PetarKovacevic/shm-comm#readme"
+Repository = "https://github.com/PetarKovacevic/shm-comm"
+"Bug Tracker" = "https://github.com/PetarKovacevic/shm-comm/issues"
+Changelog = "https://github.com/PetarKovacevic/shm-comm/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["shm_comm*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "multiprocess: marks tests that spawn multiple processes (slower)",
+    "performance: marks performance benchmark tests",
+]
+
+[tool.coverage.run]
+source = ["shm_comm"]
+omit = ["tests/*", "examples/*"]

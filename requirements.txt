@@ -1,0 +1,9 @@
+# Core requirements
+numpy>=1.21
+
+# Optional: faster serialization
+# msgpack>=1.0
+
+# Development / testing
+pytest>=7.0
+pytest-timeout
