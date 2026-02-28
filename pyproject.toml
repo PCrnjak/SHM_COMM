@@ -1,20 +1,19 @@
 [build-system]
-requires = ["setuptools>=64", "wheel"]
-build-backend = "setuptools.backends.legacy:build"
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
 
 [project]
 name = "shm-comm"
 version = "1.0.0"
 description = "High-performance shared memory IPC for Python — ZMQ-like API without the network overhead"
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
 authors = [{ name = "Petar" }]
 keywords = ["shared-memory", "ipc", "robotics", "pubsub", "zmq", "low-latency"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
     "Intended Audience :: Science/Research",
-    "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
     "Programming Language :: Python :: 3.8",
